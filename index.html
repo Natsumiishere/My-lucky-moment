@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#08060d">
+  <title>Friday · 06:59</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #08060d;
+      --purple: #b66cff;
+      --lavender: #dec0ff;
+      --muted: #9a8aa9;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      background:
+        radial-gradient(ellipse at 50% 44%, rgba(126, 34, 206, .17), transparent 48%),
+        var(--bg);
+      color: #faf7ff;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+    .card {
+      width: min(100%, 440px);
+      padding: 48px 24px 42px;
+      text-align: center;
+      background: linear-gradient(145deg, rgba(25, 15, 39, .92), rgba(11, 8, 17, .98));
+      border: 1px solid rgba(182, 108, 255, .28);
+      border-radius: 26px;
+      box-shadow: 0 0 70px rgba(126, 34, 206, .12), inset 0 1px rgba(255,255,255,.035);
+    }
+    .day {
+      margin: 0 0 27px;
+      color: var(--lavender);
+      font-size: 14px;
+      font-weight: 650;
+      letter-spacing: .38em;
+      text-transform: uppercase;
+    }
+    .time {
+      margin: 0;
+      font-size: clamp(68px, 18vw, 92px);
+      line-height: 1;
+      font-weight: 620;
+      letter-spacing: -.065em;
+      font-variant-numeric: tabular-nums;
+      text-shadow: 0 0 30px rgba(182, 108, 255, .25);
+    }
+    .divider {
+      height: 2px;
+      width: 48px;
+      margin: 29px auto 25px;
+      border-radius: 2px;
+      background: linear-gradient(90deg, transparent, var(--purple), transparent);
+      box-shadow: 0 0 12px rgba(182, 108, 255, .4);
+    }
+    .quote {
+      margin: 0;
+      color: var(--lavender);
+      font-size: clamp(14px, 4vw, 16px);
+      letter-spacing: .035em;
+    }
+    .glow {
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      margin: 0 0 3px 8px;
+      border-radius: 50%;
+      background: var(--purple);
+      box-shadow: 0 0 12px var(--purple);
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: .55; }
+      50% { opacity: 1; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .glow { animation: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <p class="day">Friday<span class="glow" aria-hidden="true"></span></p>
+    <h1 class="time">06:59</h1>
+    <div class="divider" aria-hidden="true"></div>
+    <p class="quote">My first and last love</p>
+  </main>
+</body>
+</html>
